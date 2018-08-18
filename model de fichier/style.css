@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	width:100%;
+
+    	font: 100% Verdana, Arial, Helvetica, sans-serif;
+		background-color:#eeeeee;
+
+    	margin: 0 auto; /* il est conseillé de mettre à zéro la marge et le remplissage de l'élément body, pour tenir compte des différentes valeurs par défaut des navigateurs */
+
+    	padding: 0;
+
+    	/* text-align: center; ce paramétrage centre le conteneur dans les navigateurs IE 5.x. Le texte est ensuite aligné à gauche (valeur par défaut) dans le sélecteur #container */
+
+    	color: #000000;
+	
+	
+	}
+	
+#page{
+	width:1000px;
+	}
+#header{
+	height:150px;
+	background-color:#CCC;	
+	
+	}
+
+#navigation{
+	height:40px;
+	padding:2px 5px 7px 5px;
+	background-color:#000;	
+	
+	}
+
+#navigation ul{
+	
+	}
+	#navigation ul li{
+		list-style:none;
+		display:inline;
+		padding:5px 5px 5px 5px; 
+	
+	}
+#navigation ul li a{
+		display:inline-block;
+		text-decoration:none;
+		color:#CCC;
+		font-size:12px;
+		text-transform:uppercase;
+		
+	
+	}
+	
+#navigation ul li a:hover{
+		color:#F60;
+		
+	
+	}
+	
+
+	
+	
+#contenu{
+	min-height:330px;
+	padding:5px 5px 5px 5px;
+	
+	}
+	
+#contenu h1{
+		font-size:18px;
+		color:#666;
+	}
+#contenu h4{
+		font-size:14px;
+	}
+	
+#contenu #colg{
+	float:left;
+	width:250px;
+	min-height:300px;
+	border:solid 1px #F60;
+	/*coins arrondis*/
+	border-radius:5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	-webkit-border-radius:5px 5px 0 0;
+	
+	
+	}
+	
+#contenu #cold{
+	float:right;
+	width:700px;
+	padding:10px 5px 0 5px;
+	min-height:300px;
+	/*border:solid 1px #F60;*/
+	/*coins arrondis*/
+	border-radius:5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	-webkit-border-radius:5px 5px 0 0;
+	/*texte*/
+	font-size:12px;
+	
+	
+	}
+	
+	#contenu #cold #mail{
+	float:right;
+	font-size:12px;
+	
+	
+	}
+
+	
+#footer{
+	padding:10px 5px 0 5px;
+	height:50px;
+	background-color:#000;
+	color:#F60;
+	font-size:12px;
+	
+	
+	}

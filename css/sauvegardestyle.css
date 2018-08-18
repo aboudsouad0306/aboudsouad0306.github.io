@@ -1,0 +1,538 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Arial, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	/*background-color:#178FCD;*/
+	background-image:url('imgs/bg.png');
+}
+
+/* ~~ Sélecteurs d'éléments/balises ~~ */
+ul, ol, dl { /* En raison des variations entre les navigateurs, il est conseillé d'attribuer une valeur de zéro aux marges intérieures et aux marges des listes. A des fins de cohérence, vous pouvez définir les valeurs désirées dans cette zone ou dans les éléments de liste (LI, DT, DD) qu'elle contient. N'oubliez pas que les paramètres que vous définissez ici se répercuteront sur la liste .nav, sauf si vous rédigez un sélecteur plus spécifique. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la suppression de la marge supérieure résout un problème où les marges sortent de leur div conteneur. La marge inférieure restante l'éloignera de tout élément qui suit. */
+	padding-right: 15px;
+	padding-left: 15px; /* l'ajout de la marge intérieure aux côtés des éléments à l'intérieur des divs, et non aux divs proprement dit, évite le recours à des calculs de modèle de boîte. Une autre méthode consiste à employer une div imbriquée avec marge intérieure latérale. */
+}
+a img { /* ce sélecteur élimine la bordure bleue par défaut affichée dans certains navigateurs autour d'une image lorsque celle-ci est entourée d'un lien. */
+	border: none;
+}
+
+/* ~~ La définition du style des liens de votre site doit respecter cet ordre, y compris le groupe de sélecteurs qui créent l'effet de survol. ~~ */
+a:link {
+	/*color: #42413C;
+	text-decoration: underline; /* à moins que vous ne définissiez un style particulièrement exclusif pour vos liens, mieux vaut prévoir un soulignement, qui garantit une identification visuelle rapide. */
+}
+a:visited {
+	/*color: #6E6C64;
+	text-decoration: underline;*/
+}
+a:hover, a:active, a:focus { /* ce groupe de sélecteurs offrira à un navigateur au clavier la même expérience de survol que celle d'une personne employant la souris. */
+	text-decoration: none;
+}
+
+/* ~~ ce conteneur à largeur fixe entoure les autres divs ~~ */
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* la valeur automatique sur les côtés, associée à la largeur, permet de centrer la mise en page */
+	-moz-border-radius:0px;
+    -webkit-border-radius:0px;
+    border-radius:0px;
+   /* border: 1px solid #cfcfcf;*/
+	/*ombrage du conteneur*/
+	-moz-box-shadow: 0px 0px 6px 3px #cfcfcf;
+    -webkit-box-shadow: 0px 0px 6px 3px #cfcfcf;
+    -o-box-shadow: 0px 0px 6px 3px #cfcfcf;
+    box-shadow: 0px 0px 6px 3px #cfcfcf;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=NaN, Strength=6);
+}
+
+/* ~~ aucune largeur n'est attribuée à l'en-tête. Il occupera toute la largeur de votre mise en page. Il contient un espace réservé pour une image, qui doit être remplacé par votre logo lié. ~~ */
+.top{
+	width: 950px;
+	background-image:url("imgs/px.png");
+	/*background-color: #000;*/
+	height:60px;
+	/*padding:9px 5px 0 5px;*/
+	/*fixer la nvigation*/
+	/*position: fixed;*/
+}
+
+.top #acces{
+	/*width: 950px;*/
+	/*float:right;*/
+	height:50px;
+	font-size:11px;
+	margin-left:50px;
+	
+}
+
+/*lien du haut*/
+.top #lien{
+	/*width: 950px;*/
+	float:right;
+	height:50px;
+	font-size:11px;
+	margin-left:25px;
+}
+
+.top #lien li{
+list-style:none;
+}
+.top #lien li a{
+text-decoration:none;
+}
+/*liens de la navigation horizontale*/
+
+
+
+.navigation {
+	width: 950px;
+/*background-color: #000;*/
+	height:30px;
+	padding:5px 5px 5px 5px;
+	margin-top:10px;
+	
+}
+
+.navigation ul{
+margin-bottom:10px;
+	
+}
+.navigation ul li{
+width: 250px;
+display:inline;
+	
+}
+.navigation ul li:hover{
+
+display:inline;
+
+
+	
+}
+/*liens de la navigation horizontale*/
+
+.navigation li a{
+    width: 110px;
+	height:30px;
+	display:inline-block;
+	/*definir des marges internes */
+	padding-top:10px;
+	margin-bottom:10px;
+	
+	text-align:center;
+	text-decoration:none;
+	/*color:#178FCD;/*bleu azur*/
+	color:#CCC;/*gris*/
+	/*margin-left:5px;*/
+	/*margin-bottom:5px;*/
+	font-size:14px;
+	
+}
+
+.navigation li a:hover{
+    /*border-top:solide 4px orange;*/
+	text-decoration:none;
+	color:#178FCD;/*bleu azur*/
+	/*background-color:#178FCD;*/
+}
+
+.header {
+	/*background-color: #74D0F1;bleu azur*/
+	/*background-image:url("imgs/header.png");*/
+	background-color:#178FCD;
+	height:200px;
+	/*-moz-border-radius:0px;
+    -webkit-border-radius:0px;
+    border-radius:0px;
+    border: 3px solid #cfcfcf;*/
+}
+.logo {
+	float:left;
+	margin-top:10px;
+	margin-left:15px;
+}
+.search {
+	/*background-color: #74D0F1;*//*azur*/
+	/*background-color: #D2D524;/*jaune*/
+	background-image:url(imgs/navbar.png);
+	background-repeat:no-repeat;
+	margin-left:4px;
+	width:1000px;
+	height:55px;
+}
+
+.search #chp{
+	height:25px;
+}
+.search #select{
+	width:200px;
+	height:30px;
+	padding:5px 5px 5px 5px;
+}
+/*page d'accueil uniquement*/
+.horbar {
+	float: left;
+	margin-top:10px;
+	margin-left:10px;
+	width: 640px;
+	min-height:100px;
+	/*border:solid 1px #000;*/
+	border-bottom:solid 1px #000;
+	padding-bottom: 10px;
+	/*coins arrondis !!*/
+	/*border-radius:5px 5px 5px 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;*/
+	/*fin des coins arrondis*/
+	
+	
+}
+
+
+
+
+.horbar ul{
+
+}
+
+.horbar ul li{
+	display:inline;
+	list-style:none;
+	margin-left:5px;
+
+}
+
+.horbar ul li a{
+	text-decoration:none;
+	font-size:12px;
+	margin-left:5px;
+
+}
+
+.horbar ul li a:hover{
+	text-decoration: underline;
+	color:#F60;
+
+}
+
+.avert{/*pour la page ajouter votre entreprise*/
+    margin-top:15px;
+	padding: 5px 5px 5px 5px;
+	width: 700px;
+	min-height:50px;
+	float: left;
+	margin-left:20px;
+	font-size:14px;
+	border:solid 1px #333;
+}
+
+.add {
+    float: right;
+	margin-top:10px;
+	margin-left:5px;
+	width: 300px;
+	min-height:100px;
+	/*border:solid 1px #000;*/
+	/*background-color: #EADCAE;*/
+	/*padding-bottom: 10px;*/
+	/*coins arrondis !!*/
+	/*border-radius:5px 5px 5px 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;*/
+	/*fin des coins arrondis*/
+
+}
+
+/*pour la page d'accueil*/
+.home {
+	float: left;
+	margin-top:15px;
+	margin-left:10px;
+	width: 640px;
+	/*min-height:100px;*/
+	/*border:solid 1px #000;*/1 
+	/*background-color: #EADCAE;*/
+	padding-bottom: 10px;
+	/*coins arrondis !!*/
+	/*border-radius:5px 5px 5px 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;*/
+	/*fin des coins arrondis*/
+}
+
+/*gros titres*/
+
+.home h1{
+font-size:18px;
+}
+
+.news {
+	float: left;
+	margin-top:5px;
+	margin-bottom:5px;
+	width: 640px;
+	padding-bottom: 5px;
+	border-bottom:dashed 1px #999;
+}
+.home p{
+font-size:12px;
+}
+.home #zonea{
+float:left;
+width: 200px;
+height:250px;	
+/*border:solid 1px #000;*/
+/*coins arrondis !!*/
+	border-radius:5px 5px 5px 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;
+	/*fin des coins arrondis*/	
+	/*ombre portée de la zone*/
+	-webkit-box-shadow: 0px 5px 10px rgba(27, 27, 29, 0.4);
+    -moz-box-shadow:    0px 5px 10px rgba(27, 27, 29, 0.4);
+     box-shadow:        0px 5px 10px rgba(27, 27, 29, 0.4);
+}
+
+.home #zonea h3{
+width: 170px;
+height:40px;	
+/*border:solid 1px #000;*/
+/*coins arrondis !!*/
+	border-radius:5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	-webkit-border-radius:5px 5px 0 0;
+	
+	/*fin des coins arrondis*/	
+	/*couleur de fond*/
+	background-color:#178FCD;
+	color:#FFF;
+}
+.home #zoneb h3{
+width: 170px;
+height:40px;	
+/*border:solid 1px #000;*/
+/*coins arrondis !!*/
+	border-radius:5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	-webkit-border-radius:5px 5px 0 0;
+	
+	/*fin des coins arrondis*/	
+	/*couleur de fond*/
+	background-color:#178FCD;
+	color:#FFF;
+}
+.home #zonec h3{
+width: 170px;
+height:40px;	
+/*border:solid 1px #000;*/
+/*coins arrondis !!*/
+	border-radius:5px 5px 0 0;
+	-moz-border-radius:5px 5px 0 0;
+	-webkit-border-radius:5px 5px 0 0;
+	
+	/*fin des coins arrondis*/	
+	/*couleur de fond*/
+	background-color:#178FCD;
+	color:#FFF;
+}
+.home #zoneb{
+	float:left;
+	margin-left:15px;
+	width: 200px;
+	height:250px;
+/*border:solid 1px #000;*/	
+	/*coins arrondis !!*/
+	border-radius:5px 5px 5px 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;
+	/*fin des coins arrondis*/
+	/*ombre portée de la zone*/
+	-webkit-box-shadow: 0px 5px 10px rgba(27, 27, 29, 0.4);
+    -moz-box-shadow:    0px 5px 10px rgba(27, 27, 29, 0.4);
+     box-shadow:         0px 5px 10px rgba(27, 27, 29, 0.4);
+}
+.home #zonec{
+	float:right;
+	width: 200px;
+	height:250px;
+	/*border:solid 1px #000;*/
+	margin-left:15px;	
+	/*coins arrondis !!*/
+	border-radius:5px 5px 5px 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;
+	/*fin des coins arrondis*/
+	/*ombre portée de la zone*/
+	-webkit-box-shadow: 0px 5px 10px rgba(27, 27, 29, 0.4);
+    -moz-box-shadow:    0px 5px 10px rgba(27, 27, 29, 0.4);
+     box-shadow:         0px 5px 10px rgba(27, 27, 29, 0.4);
+}
+
+/*design du lien "lire la suite"*/
+.home .suite{
+	float:right;
+	color:#ac0b17;
+	text-decoration:none;
+}
+/*voir toutes les actualites*/
+.home .toute{
+
+	float:left;
+	/*margin-left:10px;*/
+	color:#F60;
+	text-decoration:none;
+}
+
+/*mise en page des paragraphes p*/
+.home p{
+height:100px;
+}
+
+/*fin de la zone special accueil*/
+.sidebar1 {
+	float: left;
+	width: 220px;
+	/*background-color: #EADCAE;*/
+	padding-bottom: 10px;
+}
+
+.sidebar1 #secteur{
+	float: left;
+	width: 200px;
+	padding: 5px 5px 5px 15px;
+	background-color: #000;
+	margin-bottom:10px;
+	color:#fff;
+}
+
+.content {
+
+	padding: 10px 0;
+	width: 700px;
+	min-height:50px;
+	float: left;
+	font-size:12px;
+}
+
+
+.content #entr{
+
+	padding: 5px 5px 5px 5px;
+	width: 400px;
+	min-height:200px;
+	float: left;
+	margin-left:20px;
+	font-size:12px;
+}
+.content #entr h4{
+font-size:14px;
+}
+
+/*pour la page inscription*/
+
+
+.content #civ{
+width: 500px;
+float:left;
+	padding: 5px 5px 5px 5px;
+	min-height:50px;
+	font-size:14px;
+	border-bottom:dashed 1px #FF6600;
+}
+/* ~~ Ce sélecteur groupé donne de l'espace aux listes dans la zone .content ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* cette marge intérieure reflète la marge intérieure droite dans les en-têtes et la règle de paragraphe ci-dessus. Une marge intérieure a été placée en bas, afin d'assurer un espace entre les autres éléments des listes, et à gauche pour créer le retrait. Vous pouvez les régler comme bon vous semble. */
+}
+
+/* ~~ Styles de liste de navigation (peuvent être supprimés si vous optez pour un menu de survol prédéfini tel que Spry) ~~ */
+ul.nav {
+	list-style: none;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+ul.nav li {
+	border-bottom: 1px dotted #666; 
+	list-style:none;
+	font-size:12px;
+}
+ul.nav a, ul.nav a:visited {
+	padding: 5px 5px 5px 15px;
+	display: block;
+	width: 200px; 
+	text-decoration: none;
+	/*background-color: #74D0F1;bleu azur*/
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* modifie la couleur de l'arrière-plan et du texte pour les navigateurs à la souris et au clavier. */
+	background-color: #f60;
+	color: #FFF;
+}
+
+/*zone d'avant le pied de page*/
+
+.profooter {
+	border-top:solid 1px #178FCD;
+	/*background-color: #fff;*/
+	background-image:url('imgs/txture.png');
+	/*color:#D2D524;/*jaune*/
+	color:#178FCD;/*bleu azur*/
+	height:100px;
+	font-size:12px;
+	/*text-align:center;*/
+	position: relative;/* donne hasLayout à IE6 de façon à permettre un effacement correct */
+	clear: both; /* cette propriété d'effacement force le .container à comprendre où se terminent les colonnes et à les contenir */
+}
+.profooter  #letter {
+    
+    float: left;
+	margin-top:10px;
+	margin-left:5px;
+	width: 250px;
+	min-height:100px;
+	/*taille du texte*/
+	font-size:12px;
+	/*border:solid 1px #000;*/
+	/*background-color: #EADCAE;*/
+	/*padding-bottom: 10px;*/
+	/*coins arrondis !!*/
+	/*border-radius:5px 5px 5px 5px;
+	-moz-border-radius:5px 5px 5px 5px;
+	-webkit-border-radius:5px 5px 5px 5px;*/
+	/*fin des coins arrondis*/
+
+}
+
+/* ~~ Pied de page ~~ */
+.footer {
+	padding: 10px 0;
+	background-image:url('imgs/txture.png');
+	color:#ddd;/*gris clair*/
+	height:40px;
+	font-size:12px;
+	text-align:center;
+	position: relative;/* donne hasLayout à IE6 de façon à permettre un effacement correct */
+	clear: both; /* cette propriété d'effacement force le .container à comprendre où se terminent les colonnes et à les contenir */
+}
+
+/* ~~ classes flottant/effacement diverses ~~ */
+.fltrt {  /* cette classe peut servir à faire flotter un élément depuis la droite sur votre page. L'élément flottant doit précéder l'élément à côté duquel il doit apparaître sur la page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* cette classe peut servir à faire flotter un élément depuis la gauche sur votre page. L'élément flottant doit précéder l'élément à côté duquel il doit apparaître sur la page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* cette classe peut être placée sur une div <br /> ou vide, en tant qu'élément final suivant la dernière div flottante (dans le #container) si le paramètre #footer est supprimé ou retiré du #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}

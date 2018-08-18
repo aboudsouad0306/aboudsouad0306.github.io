@@ -1,0 +1,183 @@
+   .navbar {
+    margin-bottom : 0;
+    border-radius : 0;
+    background-color : #8c8c8c ;
+    color: #FFF ;  
+    border: 0 ;
+    padding: 5px 0 ;
+    font-size: 1.2em;
+    }
+
+    .navbar-brand{
+      float: left;
+      min-height: 20px ; 
+      padding:  2px 0 20px 20px ;
+
+    }
+
+    .navbar-inverse .navbar-nav .active a , .navbar-inverse .navbar-nav .active a:focus , 
+    .navbar-inverse .navbar-nav .active a:hover{
+      color:red;
+      background-color: #8c8c8c ;
+    }
+
+    .navbar-inverse .navbar-nav li a {
+    color: #D5D5D5;
+    font-size: 16px;
+    padding: 0 5px 0 0 ;
+
+    }
+
+    body html {
+      margin : 0;
+      padding:  0 ;
+      overflow-y: auto;
+      overflow-x: auto;
+      background-color:  #515fc1   ;
+
+    }
+
+
+
+    .backgroundimg {
+    background-image: url('../imgs/resirve.jpg');
+    background-size: cover;
+    background-position: center center ;
+    background-repeat: no-repeat;
+    height:  75vh ;
+    width: 100%;
+    opacity: 0.9;
+    display: block;
+   
+    }
+
+    label {
+      font-size: 14px;
+      background-color: none ;
+      font-weight: none;
+      margin-left: 10px;
+
+    }
+
+     input:hover , input:focus {
+      background-color: white ;
+      border: 0 ;
+      border-radius : 5px ;
+      color : #9495a5 ;
+      opacity: 0.85;
+      font-size: 14px;
+
+    }
+
+    input {
+      opacity: 0.70 ;
+      border-radius : 3px;
+      border :0;
+      height: 30px;
+      text-indent: 10px;
+     
+      }
+     
+     .form-control:hover , .form-control:focus {
+      background-color: white ;
+      border: 0 ;
+      border-radius : 5px ;
+      /*width: 250px ;*/ 
+      height: 30px;
+      color : #9495a5!important ;
+      opacity: 0.85;
+      font-size: 14px;
+
+    } 
+
+    .form-control {
+      width : 250px!important;
+      height: 30px!important;
+      opacity : 0.65;
+      margin-left: 10px;
+
+    }  
+
+    #date {
+      width: 250px;
+      
+    }
+
+    #time {
+      width: 100px ;
+      
+    }
+    .agence {
+      display: inline-block;
+    }
+    
+
+    #time1 , #date1 , #time2 , #date2  {
+      display: inline-block;
+    } 
+
+    #date2 {
+       
+       margin-left: 150px;
+    }
+
+     #checkbox {
+      display: inline-block;
+      margin-left: 50px;
+     }
+
+     #checkbox2 , #checkbox3 {
+      display: inline-block;
+      margin-left: -40px;
+      margin-top: -10px;
+     }
+
+     #checkbox3 {
+      display: inline-block;
+      margin-left: 300px;
+      margin-top: -10px;
+     }
+
+
+
+     #recherch {
+      display: inline-block;
+      margin-left: 50px;
+      color: #8c8c8c;
+      height: 25px;
+
+     }
+
+     #radio2 {
+      margin-left: 100px;
+     }
+
+    form {
+      padding: 310px 0 0 150px ;
+      color:  white ;
+      /*text-shadow: #9495a5 ;*/
+    }
+
+    #myCarousel {
+      width: 200px;
+      margin-top: 25px;
+      margin-left: 40px;
+      margin-bottom: 30px;
+    }
+
+    img .carousel-inner {
+      height: 100px ;
+    }
+
+    /*#carous {
+      background-color:     #515fc1;
+    }*/
+
+    #suit  {
+      
+      height: 500px;
+      background-color: black ; 
+      padding: 100px 0 0px 200px; 
+      display: block;
+
+    }

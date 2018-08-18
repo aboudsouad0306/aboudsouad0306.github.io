@@ -1,0 +1,7 @@
+<?php
+//script de suppression d'un membre
+
+
+
+
+?>
